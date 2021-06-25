@@ -36,4 +36,11 @@ class comicController extends Controller
         $comic = Comic::findOrFail($id);
         return view("edit",compact("comic"));
     }
+    function destroy($id){
+        $user = Comic::findOrFail($id);
+
+        $user->delete();
+
+        return redirect()->route("home");
+    }
 }

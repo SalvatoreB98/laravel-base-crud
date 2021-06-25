@@ -54,11 +54,6 @@ label{
     font-weight: 600;
     margin-top: 25px;
 }
-input[type=submit]{
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 25px;
-}
 .back{
     a{
         display: inline-block;
@@ -123,4 +118,24 @@ a.btn{
 }
 .details{
     background-color: $blue
+}
+input.btn{
+    color: white;
+    font-weight: bold;
+    text-align: left;
+    -webkit-appearance: none;
+    border: none;
+    min-width: 95px;
+}
+.input-wrapper {
+    display:inline-block;
+    position: relative
+}
+.input-wrapper:after {
+    color: white;
+    transform: translate(-5px,5px);
+    font-family: 'FontAwesome';
+    content: '\f1f8';
+    position: absolute;
+    right: 6px;
 }

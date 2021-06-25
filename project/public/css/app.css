@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 html,
 body {
   background-color: #fff;
@@ -53,12 +55,6 @@ body {
 label {
   display: inline-block;
   font-weight: 600;
-  margin-top: 25px;
-}
-
-input[type=submit] {
-  display: inline-block;
-  padding: 10px 20px;
   margin-top: 25px;
 }
 
@@ -135,5 +131,28 @@ a.btn:visited {
 
 .details {
   background-color: #31809F;
+}
+
+input.btn {
+  color: white;
+  font-weight: bold;
+  text-align: left;
+  -webkit-appearance: none;
+  border: none;
+  min-width: 95px;
+}
+
+.input-wrapper {
+  display: inline-block;
+  position: relative;
+}
+
+.input-wrapper:after {
+  color: white;
+  transform: translate(-5px, 5px);
+  font-family: "FontAwesome";
+  content: "\F1F8";
+  position: absolute;
+  right: 6px;
 }
 

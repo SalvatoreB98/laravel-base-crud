@@ -27,7 +27,7 @@
                     <label for="series"> SEERIES: <br> <input type="text" name="series" value="{{$comic['series']}}"></label> <br>
                     <label for="sale_date"> DATE SALE: <br> <input type="date" name="sale_date" value="{{$comic['sale_date']}}"></label> <br>
                     <label for="type"> TYPE: <br> <input type="text" name="type" value="{{$comic['type']}}"></label> <br>
-                    <input type="submit" value="ADD">
+                    <input type="submit" value="EDIT">
                 </form>
             </div>
         </div>
