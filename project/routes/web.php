@@ -20,5 +20,8 @@ Route::get('comic/create', 'comicController@create')->name('comic.create');
 Route::post('comic/store', 'comicController@store')->name('comic.store');
 
 Route::get('comic/{id}', 'comicController@show')->name('comic.show');
-// Route::get('/', 'comicController@store')->name('user.store');
+
+Route::get('comic/{id}/edit', 'comicController@edit')->name('comic.edit');
+
+Route::match(["PUT", "PATCH"], "/comic/update/{id}", "comicController@update")->name("comic.update");
 

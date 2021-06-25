@@ -20,7 +20,8 @@
                 <form action="{{route('comic.store')}}" method="post">
                 @csrf
                     <label for="title"> TITLE: <br> <input type="text" name="title"></label> <br>
-                    <label for="description">DESCRIPTION: <br> <input type="text" name="description"></label> <br>
+                    <label for="description">DESCRIPTION: <br><textarea id="description" name="description" rows="4" cols="25"> </textarea> </label> <br>
+                    
                     <label for="thumb"> THUMB: <br> <input type="text" name="thumb"></label> <br>
                     <label for="price"> PRICE: <br> <input type="number" step="0.01" name="price"></label> <br>
                     <label for="series"> SEERIES: <br> <input type="text" name="series"></label> <br>
