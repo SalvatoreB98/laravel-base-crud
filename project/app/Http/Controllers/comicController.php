@@ -10,20 +10,14 @@ class comicController extends Controller
         return view("create");
     }
     function show($id){
-        
-        return view("show");
+        $comic = Comic::find($id);
+        return view("show",compact("comic"));
     }
     public function store(Request $request){
         $comicData = $request->all();
         
         $newComic = new Comic();
-        $newComic->title = $request['title'];
-        $newComic->description = $request['description'];
-        $newComic->thumb = $request['thumb'];
-        $newComic->price = $request['price'];
-        $newComic->series = $request['series'];
-        $newComic->sale_date = $request['sale_date'];
-        $newComic->type = $request['type'];
+        $newComic->fill($comicData);
         $newComic->save();
         return redirect()->route('comic.show',$newComic->id);
 

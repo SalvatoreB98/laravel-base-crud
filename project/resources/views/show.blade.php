@@ -14,8 +14,11 @@
         <div class="content">
             <div class="title m-b-md">
                 COMIC ADDED
+                <div> {{$comic['title']}}</div>
             </div>
+            <div><img src="{{$comic['thumb']}}" alt=""></div>
             <div class="links">
+                <div class="back"><a href="{{route('home')}}"> <strong>BACK</strong> </a></div>
             </div>
         </div>
     </div>
