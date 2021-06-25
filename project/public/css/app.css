@@ -134,12 +134,14 @@ a.btn:visited {
 }
 
 input.btn {
+  min-height: 30px;
   color: white;
   font-weight: bold;
   text-align: left;
   -webkit-appearance: none;
   border: none;
   min-width: 95px;
+  cursor: pointer;
 }
 
 .input-wrapper {
@@ -154,5 +156,6 @@ input.btn {
   content: "\F1F8";
   position: absolute;
   right: 6px;
+  bottom: 50%;
 }
 
