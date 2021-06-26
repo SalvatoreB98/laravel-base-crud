@@ -22,5 +22,6 @@
             </form>
         </div>
     </div>
+    <div class="back"><a href="{{route('home')}}"> <strong>BACK</strong> </a></div>
 </div>
 @endsection
