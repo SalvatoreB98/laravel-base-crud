@@ -1,16 +1,7 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>EDIT</title>
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-</head>
-<body>
-    <div class="flex-center position-ref full-height">
+@extends('layout')
+@section('pageTitle', 'Add a new comic')
+@section('content')
+    <div class="position-ref full-height">
         <div class="content">
             <div class="title m-b-md">
                 EDIT
@@ -32,5 +23,4 @@
             </div>
         </div>
     </div>
-</body>
-</html>
+@endsection
