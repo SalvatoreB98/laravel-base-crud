@@ -1,5 +1,5 @@
 @extends('layout')
-@section('pageTitle', 'Add a new comic')
+@section('pageTitle', 'EDIT '.$comic['title'])
 @section('content')
     <div class="position-ref full-height">
         <div class="content">

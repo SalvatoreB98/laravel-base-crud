@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Laravel</title>
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-</head>
+@extends('layout')
+@section('pageTitle', $comic['title'])
+@section('content')
 <body>
     <div class="flex-center position-ref">
         <div class="content">
@@ -34,8 +26,13 @@
     </div>
     <div class="buttons">
         <div><a class="btn details" href="{{route('comic.show',$comic['id'])}}"> DETAILS <i class="fa fa-info" aria-hidden="true"></i> </a></div>
-        <div><a class="btn edit" href="{{route('comic.update',$comic['id'])}}"> EDIT <i class="fa fa-pencil" aria-hidden="true"></i> </a></div>
-        <div><a class="btn delete" href="{{route('comic.show',$comic['id'])}}"> DELETE <i class="fa fa-trash" aria-hidden="true"></i></i> </a></div>
+        <div><a class="btn edit" href="{{route('comic.edit',$comic['id'])}}"> EDIT <i class="fa fa-pencil" aria-hidden="true"></i> </a></div>
+        <form action="{{route('comic.destroy',$comic['id'])}}" method="post">
+            @csrf
+            @method('delete')
+            <div class="input-wrapper">
+                <input type="submit" value="DELETE" class="btn delete">
+            </div>
+        </form>
     </div>
-</body>
-</html>
+@endsection

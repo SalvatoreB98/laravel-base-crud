@@ -1,5 +1,5 @@
 @extends('layout')
-@section('pageTitle', 'Add a new comic')
+@section('pageTitle', 'Comic Database')
 @section('content')
 <body>
     <div class="flex-center position-ref full-height">
